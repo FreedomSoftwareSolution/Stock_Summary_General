@@ -1,0 +1,964 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>177/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Nov 29 10:20:35 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1808 seconds (1808002 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, Material Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, Group Wise</td>
+<td></td>
+<td>13</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP-Routesheet, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Order Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, Material Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, HSN Wise </td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, HSn Wise</td>
+<td></td>
+<td>19</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, HSN Wise</td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, Group Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, Order Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, HSN Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, Group Wise</td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, Material Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Material Wise</td>
+<td></td>
+<td>15</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, Material Wise</td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Customer Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, Group Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP-Summary, General, All, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, Material Wise</td>
+<td></td>
+<td>12</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, Order Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, Group Wise</td>
+<td></td>
+<td>18</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, Group Wise</td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, HSN Wise </td>
+<td></td>
+<td>11</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, HSn Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, Material Wise</td>
+<td></td>
+<td>8</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, HSN Wise </td>
+<td></td>
+<td>8</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, Group Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, HSN Wise </td>
+<td></td>
+<td>14</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, HSN Wise </td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, Group Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, HSN Wise </td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, Material Wise</td>
+<td></td>
+<td>10</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+<tr>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, Material Wise</td>
+<td></td>
+<td>9</td>
+<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+</table><p>
+</body>
+</html>

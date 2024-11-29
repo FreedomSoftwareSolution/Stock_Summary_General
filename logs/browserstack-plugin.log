@@ -1,0 +1,17 @@
+10:16:34.258 [main] INFO  c.b.launchers.LaunchMavenCommand - Executing maven archetype command - browserstack-sdk-archetype-integrate
+10:16:34.266 [main] INFO  c.b.launchers.LaunchMavenCommand - The maven properties for launcher are [archetypeVersion=1.5, archetypeGroupId=com.browserstack, archetypeArtifactId=browserstack-sdk-archetype-integrate, BROWSERSTACK_ACCESS_KEY=k3ZA2FmnThgybuuMd9mn, groupId=com.browserstack, artifactId=java-archetype-integrate, BROWSERSTACK_USERNAME=mageshv_qmKQFR, BROWSERSTACK_FRAMEWORK=testng, BUILD_NAME=browserstack build, version=1.0, PROJECT_NAME=BrowserStack_SoftScreens, BROWSERSTACK_SOURCE=testng:eclipse:v1.0.8]
+10:16:34.276 [Worker-7: Launching mavenrun-6829fbd8-028f-4d1d-8c5a-14243a77eddf] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+10:17:47.213 [Worker-13: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+10:17:47.219 [Worker-13: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {}
+10:19:34.398 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+10:19:34.398 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+10:19:34.434 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/FreedomSoftScreens.com.in
+10:19:34.434 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+10:19:34.436 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+10:19:34.439 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/FreedomSoftScreens.com.in
+10:19:35.673 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackEnabled
+10:19:35.676 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+10:19:35.684 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackEnabled : true P/FreedomSoftScreens.com.in
+10:19:35.687 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
+10:19:35.690 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+10:19:35.698 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/FreedomSoftScreens.com.in
