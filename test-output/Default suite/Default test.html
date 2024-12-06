@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>177/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 29 10:20:35 IST 2024</td>
+<td>Started on:</td><td>Wed Dec 04 15:58:21 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1808 seconds (1808002 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4607 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,897 +67,705 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, Material Wise</td>
-<td></td>
-<td>9</td>
+<td title='stockSummary.Stock_summary_general.stock_Summary()'><b>stock_Summary</b><br>Test class: stockSummary.Stock_summary_general</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1624817884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1624817884'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>4</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, Material Wise</td>
+<td title='stockSummary.Stock_summary_general.tearDown()'><b>tearDown</b><br>Test class: stockSummary.Stock_summary_general</td>
 <td></td>
-<td>11</td>
+<td>-1733308105</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, Group Wise</td>
-<td></td>
-<td>13</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP-Routesheet, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Order Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, Material Wise</td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Stock Only, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, HSN Wise </td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, HSn Wise</td>
-<td></td>
-<td>19</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, HSN Wise</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1252713736", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1252713736'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 <tr>
 <td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, HSN Wise</td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, Group Wise</td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, Order Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, HSN Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, Group Wise</td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, Material Wise</td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Material Wise</td>
-<td></td>
-<td>15</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, Material Wise</td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Customer Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, Group Wise</td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Zero Stock, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP-Summary, General, All, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, Material Wise</td>
-<td></td>
-<td>12</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, Order Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1970707120", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1970707120'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 <tr>
 <td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, Group Wise</td>
-<td></td>
-<td>18</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace100703210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace100703210'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Material Wise</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace254812619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace254812619'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, General, All, Group Wise</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace179233442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace179233442'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 <tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, General, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, Labour, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, ROL Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Group Wise, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, Labour, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, Zero Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Zero Stock, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, MIN Stock, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, All, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, All, Group Wise</td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, Labour, All, HSN Wise </td>
-<td></td>
-<td>11</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, HSn Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, ROL Stock, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Rejection, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Scrap, Labour, All, Material Wise</td>
-<td></td>
-<td>8</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, All, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Max Stock, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Summary, General, Zero Stock, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Supplier Bulk, Labour, All, HSN Wise </td>
-<td></td>
-<td>8</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, Labour, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, All, Group Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: supplier Routesheet Wise, General, All, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor, Labour, Stock Only, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Shoop Floor-Routesheet, General, All, HSN Wise </td>
-<td></td>
-<td>14</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, Max Stock, HSN Wise </td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: WIP Summary, General, Stock Only, Group Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, HSN Wise </td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Inventory TOR, General, Stock Only, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, All, Material Wise</td>
-<td></td>
-<td>9</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Store Stock, General, MIN Stock, Material Wise</td>
-<td></td>
-<td>10</td>
-<td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
-<tr>
-<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Labour, General, Stock Only, Material Wise</td>
-<td></td>
-<td>9</td>
+<td title='stockSummary.Stock_summary_general.xpath()'><b>xpath</b><br>Test class: stockSummary.Stock_summary_general<br>Parameters: Consolidated, Labour, All, Material Wise</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2076627578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2076627578'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5450ad9087e55cf40c22458766defbda, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\mages\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55716/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5450ad9087e55cf40c22458766defbda
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1061)
+	at stockSummary.Stock_summary_general.stock_Summary(Stock_summary_general.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
 <td>stockSummary.Stock_summary_general@6d0b5baf</td></tr>
 </table><p>
 </body>

@@ -27,24 +27,42 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class Stock_summary_general {
 
 	WebDriverWait wait;
 	WebDriver driver;
+	ExtentReports extent;
+	ExtentTest test;
 	boolean result=false;
-	//@Test /* (retryAnalyzer = RetryAnalyzer.class) */ // Add Retry Analyzer here
+
 
 	@BeforeTest
 	public void stock_Summary() throws InterruptedException {
 
+		// Setup Extent Reports
+		ExtentHtmlReporter htmlReporter =new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentStockSummaryReport.html");
+		extent=new ExtentReports();
+		extent.attachReporter(htmlReporter);
+
+
+		// Add system info to the report
+		extent.setSystemInfo("Tester", "Mageshwar");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("Type of Testing", "Regression");
+		
+
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-
 		driver = new ChromeDriver(ops);
 
+		test = extent.createTest("Setup and Login", "Setting up the WebDriver and logging into the application");
 
-		driver.get("https://beta.freedomsoft.in/Member/Login");
+
+		driver.get("https://qa.freedomnote360.com/Member/Login");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		String title = driver.getTitle();
@@ -54,17 +72,25 @@ public class Stock_summary_general {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 
-		WebElement userName = driver.findElement(By.id("username"));
-		userName.sendKeys("mageshwar@fss");
 
-		WebElement passWord = driver.findElement(By.id("id_password"));
-		passWord.sendKeys("Fss@123#");
+		try {
+			WebElement userName = driver.findElement(By.id("username"));
+			userName.sendKeys("mageshwar@fss");
 
-		WebElement subMit = driver.findElement(By.xpath("//*[@id=\"submit1\"]"));
-		subMit.click();
-		Thread.sleep(3000);
-		subMit.click();
-		System.out.println("Freedom beta Login successfully");
+			WebElement passWord = driver.findElement(By.id("id_password"));
+			passWord.sendKeys("Fss@123#");
+
+			WebElement subMit = driver.findElement(By.xpath("//*[@id=\"submit1\"]"));
+			subMit.click();
+			Thread.sleep(3000);
+			subMit.click();
+			test.pass("Login successful and landed on dashboard.");
+			System.out.println("Freedom beta Login successfully");
+		} catch (InterruptedException e) {
+
+			test.fail("Login failed: " + e.getMessage());
+			TakeScreenshots.takeScreenshot(driver, "LoginFailure.png");
+		}
 
 		wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 		try {
@@ -91,9 +117,11 @@ public class Stock_summary_general {
 		.perform();
 	}
 
-	@Test(dataProvider = "filterData",retryAnalyzer = RetryAnalyzer.class)
+	// Add Retry Analyzer here
+	@Test(dataProvider = "filterData1",retryAnalyzer = RetryAnalyzer.class)
 	public void xpath(String stocks,String stocktype,String stockqty ,String Order) throws InterruptedException
 	{
+		test = extent.createTest("Filter Test", "Applying filters and validating results");
 
 		WebElement Stocklist = driver.findElement(By.xpath("//*[@id=\"txtobj3_chosen\"]"));
 		Stocklist.click();
@@ -104,7 +132,7 @@ public class Stock_summary_general {
 		StockType.click();
 
 		driver.findElement(By.xpath("//*[@id=\"txtobj4_chosen\"]/div/div/input")).sendKeys(stocktype+Keys.ENTER);
-		
+
 		WebElement Stockqty = driver.findElement(By.xpath("//*[@id=\"txtobj14_chosen\"]"));
 		Stockqty.click();
 
@@ -115,7 +143,7 @@ public class Stock_summary_general {
 
 		driver.findElement(By.xpath("//*[@id=\"txtobj15_chosen\"]/div/div/input")).sendKeys(Order+Keys.ENTER);
 
-		
+
 		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement search = wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[69]/table[1]/tbody[1]/tr[1]/td[2]/a[1]")));
@@ -124,110 +152,113 @@ public class Stock_summary_general {
 		// Wait and Validate Results
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Set max wait time
-		 WebElement resultsTable = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"rpttable\"]/thead/tr/th")));
+			WebElement resultsTable = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"rpttable\"]/thead/tr/th")));
 
-		 // Assert visibility
+			test.pass("Filters applied successfully: " + stocks + ", " + stocktype + ", " + stockqty + ", " + Order);
+
 			result= resultsTable.isDisplayed();
 			System.out.println("Filter Successfully Loaded"+" "+result);
-			
-		} catch (Exception e) {
 
-			System.out.println("Filter Unsuccessfully"+ result);
-			
+		} catch (Exception e) {
+			test.fail("Filter application failed: " + e.getMessage());
+
+
 			if (!result) {
-              TakeScreenshots.takeScreenshot(driver, "FilterErrorScreenshot.png");
-            }
+				System.out.println("Filter Unsuccessfully"+ result);
+				TakeScreenshots.takeScreenshot(driver, "FilterErrorScreenshot.png");
+			}
 		}
-		
-		Thread.sleep(8000);
+
+		Thread.sleep(6000);
 	}
 
-	
+
 
 	@DataProvider(name = "filterData")
 	public Object[][] readExcelData() throws IOException {
-        String filePath = "D:\\eclipse\\FreedomSoftScreens.com.in\\ExcelData\\Stock Summary Tested.xlsx"; // Update with your Excel file path
-        FileInputStream fis = new FileInputStream(filePath);
-        Workbook workbook = WorkbookFactory.create(fis);
-        Sheet sheet = workbook.getSheetAt(0); // Get the first sheet
-        Iterator<Row> rowIterator = sheet.iterator();
+		String filePath = "D:\\eclipse\\FreedomSoftScreens.com.in\\ExcelData\\Stock Summary Tested.xlsx"; // Update with your Excel file path
+		FileInputStream fis = new FileInputStream(filePath);
+		Workbook workbook = WorkbookFactory.create(fis);
+		Sheet sheet = workbook.getSheetAt(0); // Get the first sheet
+		Iterator<Row> rowIterator = sheet.iterator();
 
-        List<Object[]> data = new ArrayList<>();
-        int rowIndex = 0;
+		List<Object[]> data = new ArrayList<>();
+		int rowIndex = 0;
 
-        while (rowIterator.hasNext()) {
-            Row row = rowIterator.next();
-            if (rowIndex == 0 || isRowEmpty(row)) { // Skip header and empty rows
-                rowIndex++;
-                continue;
-            }
+		while (rowIterator.hasNext()) {
+			Row row = rowIterator.next();
+			if (rowIndex == 0 || isRowEmpty(row)) { // Skip header and empty rows
+				rowIndex++;
+				continue;
+			}
 
-            String stock = getCellValue(row.getCell(0));
-            String stockType = getCellValue(row.getCell(1));
-            String stockQty = getCellValue(row.getCell(2));
-            String orderBy = getCellValue(row.getCell(3));
+			String stock = getCellValue(row.getCell(0));
+			String stockType = getCellValue(row.getCell(1));
+			String stockQty = getCellValue(row.getCell(2));
+			String orderBy = getCellValue(row.getCell(3));
 
-            data.add(new Object[]{stock, stockType, stockQty, orderBy});
-            rowIndex++;
-        }
-        workbook.close();
-        fis.close();
+			data.add(new Object[]{stock, stockType, stockQty, orderBy});
+			rowIndex++;
+		}
+		workbook.close();
+		fis.close();
 
-        return data.toArray(new Object[0][]);
-    }
+		return data.toArray(new Object[0][]);
+	}
 
-    private boolean isRowEmpty(Row row) {
-        if (row == null) return true;
-        for (Cell cell : row) {
-            if (cell != null && cell.getCellType() != CellType.BLANK) {
-                return false;
-            }
-        }
-        return true;
-    }
+	private boolean isRowEmpty(Row row) {
+		if (row == null) return true;
+		for (Cell cell : row) {
+			if (cell != null && cell.getCellType() != CellType.BLANK) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-    private String getCellValue(Cell cell) {
-        if (cell == null) return "";
-        switch (cell.getCellType()) {
-            case STRING:
-                return cell.getStringCellValue();
-            case NUMERIC:
-                return String.valueOf((int) cell.getNumericCellValue());
-            case BOOLEAN:
-                return String.valueOf(cell.getBooleanCellValue());
-            default:
-                return "";
-        }
-    }
+	private String getCellValue(Cell cell) {
+		if (cell == null) return "";
+		switch (cell.getCellType()) {
+		case STRING:
+			return cell.getStringCellValue();
+		case NUMERIC:
+			return String.valueOf((int) cell.getNumericCellValue());
+		case BOOLEAN:
+			return String.valueOf(cell.getBooleanCellValue());
+		default:
+			return "";
+		}
+	}
 
- @DataProvider	
-public Object[][] filterData1(){
-	Object login[][]= {
+	@DataProvider	
+	public Object[][] filterData1(){
+		Object login[][]= {
 
-			{"Consolidated", "General", "All", "Group Wise"},
-			{"Consolidated", "General", "All", "Material Wise"},
-			{"Consolidated", "General", "All", "HSN Wise"},
-			{"Consolidated", "Labour", "All", "Group Wise"},
-			{"Consolidated", "Labour", "All", "Material Wise"},
-			{"Consolidated", "Labour", "All", "HSN Wise"}
-			
+				{"Consolidated", "General", "All", "Group Wise"},
+				{"Consolidated", "General", "All", "Material Wise"},
+				{"Consolidated", "General", "All", "HSN Wise"},
+				{"Consolidated", "Labour", "All", "Group Wise"},
+				{"Consolidated", "Labour", "All", "Material Wise"},
+				{"Consolidated", "Labour", "All", "HSN Wise"}
 
-	};
-	return login;
-}
 
- //2508--user id
+		};
+		return login;
+	}
 
-  @AfterTest
-  public void tearDown() 
-  { 
-	  if (driver != null)
-	  { 
-		  driver.quit();
-		  
-	  }
-  }
- 
+	//2508--user id
+
+	@AfterTest
+	public void tearDown() 
+	{ 
+		extent.flush();
+		if (driver != null)
+		{ 
+			driver.quit();
+
+		}
+	}
+
 }
 
 

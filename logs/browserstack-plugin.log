@@ -15,3 +15,14 @@
 10:19:35.687 [main] INFO  c.b.a.BrowserStackPropertyTester - Testing : isBrowserStackDisabled
 10:19:35.690 [main] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
 10:19:35.698 [main] INFO  c.b.a.BrowserStackPropertyTester - Validation Result isBrowserStackDisabled : false P/FreedomSoftScreens.com.in
+10:20:00.930 [main] INFO  c.b.launchers.LaunchMavenCommand - Executing maven archetype command - browserstack-sdk-archetype-integrate
+10:20:00.936 [main] INFO  c.b.launchers.LaunchMavenCommand - The maven properties for launcher are [archetypeVersion=1.5, archetypeGroupId=com.browserstack, archetypeArtifactId=browserstack-sdk-archetype-integrate, BROWSERSTACK_ACCESS_KEY=k3ZA2FmnThgybuuMd9mn, groupId=com.browserstack, artifactId=java-archetype-integrate, BROWSERSTACK_USERNAME=mageshv_qmKQFR, BROWSERSTACK_FRAMEWORK=java, BUILD_NAME=browserstack build, version=1.0, PROJECT_NAME=BrowserStackSoftScreens, BROWSERSTACK_SOURCE=java:eclipse:v1.0.8]
+10:20:00.941 [Worker-8: Launching mavenrun-9ba44775-a3d7-4730-a62c-57c078b56231] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+10:20:32.523 [Worker-19: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+10:20:32.525 [Worker-19: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+10:20:32.533 [Worker-19: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+10:20:32.536 [Worker-19: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.8}
+12:09:01.720 [Worker-35: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The previous launch removed.
+12:09:01.722 [Worker-35: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - Existing javaagentArgline (BROWSERSTACK_JAVAAGENT_ARGLINE) in plugin prefs is 
+12:09:01.772 [Worker-35: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - Prefs Keys []
+12:09:01.787 [Worker-35: Launching Stock_summary_general] INFO  c.b.BrowserStackPluginActivator - The environment variables for the launch configuration are {BROWSERSTACK_EXEC_SOURCE=eclipse/1.0.8}
