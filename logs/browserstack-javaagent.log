@@ -630,3 +630,4 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 
 
+14:18:05.418 [main] WARN  c.b.config.BrowserStackConfig - Test Observability could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity

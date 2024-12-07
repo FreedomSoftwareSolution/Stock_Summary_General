@@ -54,7 +54,7 @@ public class Stock_summary_general {
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Type of Testing", "Regression");
 		
-
+        //to disable chrome notification
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
 		driver = new ChromeDriver(ops);
