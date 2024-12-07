@@ -117,7 +117,7 @@ public class Stock_summary_general {
 		.perform();
 	}
 
-	// Add Retry Analyzer here
+	// Add Retry Analyzer here when it fails
 	@Test(dataProvider = "filterData1",retryAnalyzer = RetryAnalyzer.class)
 	public void xpath(String stocks,String stocktype,String stockqty ,String Order) throws InterruptedException
 	{
