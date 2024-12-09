@@ -23,6 +23,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -38,6 +39,9 @@ public class Stock_summary_general {
 	ExtentReports extent;
 	ExtentTest test;
 	boolean result=false;
+	int count=1;
+	int totalcount=0;
+	int realcount=6;
 
 
 	@BeforeTest
@@ -118,7 +122,7 @@ public class Stock_summary_general {
 	}
 
 	// Add Retry Analyzer here when it fails
-	@Test(dataProvider = "filterData1",retryAnalyzer = RetryAnalyzer.class)
+	@Test(dataProvider = "filterData",retryAnalyzer = RetryAnalyzer.class)
 	public void xpath(String stocks,String stocktype,String stockqty ,String Order) throws InterruptedException
 	{
 		test = extent.createTest("Filter Test", "Applying filters and validating results");
@@ -157,7 +161,9 @@ public class Stock_summary_general {
 			test.pass("Filters applied successfully: " + stocks + ", " + stocktype + ", " + stockqty + ", " + Order);
 
 			result= resultsTable.isDisplayed();
-			System.out.println("Filter Successfully Loaded"+" "+result);
+			System.out.println("Filter Successfully Loaded"+" "+result+" "+count++);
+			
+			 totalcount=count;
 
 		} catch (Exception e) {
 			test.fail("Filter application failed: " + e.getMessage());
@@ -172,6 +178,21 @@ public class Stock_summary_general {
 		Thread.sleep(6000);
 	}
 
+	@AfterClass
+	public void countsOutput() {
+		
+		if (totalcount-1 ==realcount) {
+			
+			System.out.println("ALL TESTCASE FILTER IS EXCECUTED");
+			
+		} else {
+			
+			System.out.println("Executed count"+" "+totalcount);
+
+		}
+		
+	}
+	
 
 
 	@DataProvider(name = "filterData")

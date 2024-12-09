@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="stock_Summary"/>
-          <include name="xpath"/>
+          <include name="xpath" invocation-numbers="157 160 161 162 163 164 165 166 167 168 169 51 82 83 84 85"/>
         </methods>
       </class> <!-- stockSummary.Stock_summary_general -->
     </classes>

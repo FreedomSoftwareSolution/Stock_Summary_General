@@ -5,6 +5,7 @@
     <classes>
       <class name="stockSummary.Stock_summary_general">
         <methods>
+          <include name="countsOutput"/>
           <include name="tearDown"/>
           <include name="stock_Summary"/>
           <include name="xpath"/>
