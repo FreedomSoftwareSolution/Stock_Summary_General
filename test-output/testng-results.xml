@@ -1,62 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-09T10:08:01 IST" name="Default suite" finished-at="2024-12-09T10:08:21 IST" duration-ms="20793">
+  <suite started-at="2024-12-16T10:25:40 IST" name="Default suite" finished-at="2024-12-16T10:26:54 IST" duration-ms="74585">
     <groups>
     </groups>
-    <test started-at="2024-12-09T10:08:01 IST" name="Default test" finished-at="2024-12-09T10:08:21 IST" duration-ms="20793">
+    <test started-at="2024-12-16T10:25:40 IST" name="Default test" finished-at="2024-12-16T10:26:54 IST" duration-ms="74585">
       <class name="stockSummary.Stock_summary_general">
-        <test-method is-config="true" signature="stock_Summary()[pri:0, instance:stockSummary.Stock_summary_general@2a3591c5]" started-at="2024-12-09T10:08:01 IST" name="stock_Summary" finished-at="2024-12-09T10:08:20 IST" duration-ms="19187" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:25:40 IST" name="setup" finished-at="2024-12-16T10:25:55 IST" duration-ms="15156" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stock_Summary -->
-        <test-method signature="xpath(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@2a3591c5]" started-at="2024-12-09T10:08:20 IST" name="xpath" finished-at="2024-12-09T10:08:20 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Found two providers called 'filterData1' on class stockSummary.Stock_summary_general]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Found two providers called 'filterData1' on class stockSummary.Stock_summary_general
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:661)
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:553)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        </test-method> <!-- setup -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:25:55 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:10 IST" duration-ms="15562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Group Wise]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- xpath -->
-        <test-method is-config="true" signature="countsOutput()[pri:0, instance:stockSummary.Stock_summary_general@2a3591c5]" started-at="2024-12-09T10:08:20 IST" name="countsOutput" finished-at="2024-12-09T10:08:20 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- testFilters -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:10 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:20 IST" duration-ms="9595" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Material Wise]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- countsOutput -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:stockSummary.Stock_summary_general@2a3591c5]" started-at="2024-12-09T10:08:20 IST" name="tearDown" finished-at="2024-12-09T10:08:21 IST" duration-ms="1557" status="PASS">
+        </test-method> <!-- testFilters -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:20 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:30 IST" duration-ms="10263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[HSN Wise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilters -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:30 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:39 IST" duration-ms="8956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Labour]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Group Wise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilters -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:39 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:46 IST" duration-ms="7129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Labour]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Material Wise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilters -->
+        <test-method signature="testFilters(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:46 IST" name="testFilters" data-provider="filterData1" finished-at="2024-12-16T10:26:54 IST" duration-ms="7141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Consolidated]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Labour]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[All]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[HSN Wise]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilters -->
+        <test-method is-config="true" signature="summarizeResults()[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:54 IST" name="summarizeResults" finished-at="2024-12-16T10:26:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- summarizeResults -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:stockSummary.Stock_summary_general@482d776b]" started-at="2024-12-16T10:26:54 IST" name="tearDown" finished-at="2024-12-16T10:26:54 IST" duration-ms="687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
