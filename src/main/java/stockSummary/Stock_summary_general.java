@@ -10,7 +10,10 @@ import org.apache.poi.ss.usermodel.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -50,9 +53,15 @@ public class Stock_summary_general {
     }
 
     private void setupWebDriver() {
-        ChromeOptions options = new ChromeOptions();
+    	/*   ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
+        
+     // Configure EdgeOptions
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--disable-notifications");
+        driver = new EdgeDriver(options); 
+        
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();

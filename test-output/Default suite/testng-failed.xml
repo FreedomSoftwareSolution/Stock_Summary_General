@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testFilters" invocation-numbers="14 24 25 29 31 37 38 62 75 75 75 75 92 105 128 170 171 172 172 172 172 173 173 174 174 174 174 176 176"/>
+          <include name="testFilters" invocation-numbers="0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5"/>
           <include name="summarizeResults"/>
         </methods>
       </class> <!-- stockSummary.Stock_summary_general -->
