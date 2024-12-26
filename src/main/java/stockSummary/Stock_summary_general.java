@@ -13,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -22,168 +21,168 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class Stock_summary_general {
 
-    private static final String BASE_URL = "https://qa.freedomnote360.com/Member/Login";
-    private static final String EXCEL_PATH = "D:\\eclipse\\FreedomSoftScreens.com.in\\ExcelData\\Stock Summary Tested.xlsx";
-    private static final String REPORT_PATH = System.getProperty("user.dir") + "/test-output/ExtentStockSummaryReport.html";
-    private static  String userName="mageshwar@fss";
-    private static String passWord="Fss@123#";
-    
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private ExtentReports extent;
-    private ExtentTest test;
-    private int totalTestCount = 0;
-    private static final int EXPECTED_TEST_COUNT = 177;
+	private static final String BASE_URL = "https://qa.freedomnote360.com/Member/Login";
+	private static final String EXCEL_PATH = "D:\\eclipse\\FreedomSoftScreens.com.in\\ExcelData\\Stock Summary Tested.xlsx";
+	private static final String REPORT_PATH = System.getProperty("user.dir") + "/test-output/ExtentStockSummaryReport.html";
+	private static  String userName="mageshwar@fss";
+	private static String passWord="Fss@123#";
 
-    @BeforeTest
-    public void setup() throws InterruptedException {
-        setupExtentReports();
-        setupWebDriver();
-        loginToApplication();
-        navigateToGeneralStockSummary();
-    }
+	private WebDriver driver;
+	private WebDriverWait wait;
+	private ExtentReports extent;
+	private ExtentTest test;
+	private int totalTestCount = 1;
+	private static final int EXPECTED_TEST_COUNT = 7;
 
-    private void setupExtentReports() {
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(REPORT_PATH);
-        extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Tester", "Mageshwar");
-        extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("Type of Testing", "Regression");
-    }
+	@BeforeTest
+	public void setup() throws InterruptedException {
+		setupExtentReports();
+		setupWebDriver();
+		loginToApplication();
+		navigateToGeneralStockSummary();
+	}
 
-    private void setupWebDriver() {
-    	/*   ChromeOptions options = new ChromeOptions();
+	private void setupExtentReports() {
+		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(REPORT_PATH);
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("Tester", "Mageshwar");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("Type of Testing", "Regression");
+	}
+
+	private void setupWebDriver() {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		driver = new ChromeDriver(options);
+
+		// Configure EdgeOptions
+		/*  EdgeOptions options = new EdgeOptions();
         options.addArguments("--disable-notifications");
-        driver = new ChromeDriver(options);*/
-        
-     // Configure EdgeOptions
-        EdgeOptions options = new EdgeOptions();
-        options.addArguments("--disable-notifications");
-        driver = new EdgeDriver(options); 
-        
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-    }
+        driver = new EdgeDriver(options); */
 
-    private void loginToApplication() throws InterruptedException {
-        driver.get(BASE_URL);
-        test = extent.createTest("Setup and Login", "Setting up WebDriver and logging in");
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+	}
 
-        try {
-            driver.findElement(By.id("username")).sendKeys(userName);
-            driver.findElement(By.id("id_password")).sendKeys(passWord);
-            WebElement submitButton = driver.findElement(By.id("submit1"));
-            submitButton.click();
-            Thread.sleep(3000);
-            submitButton.click(); // In case of initial failure
+	private void loginToApplication() throws InterruptedException {
+		driver.get(BASE_URL);
+		test = extent.createTest("Setup and Login", "Setting up WebDriver and logging in");
 
-            handleAlertIfPresent();
-            test.pass("Login successful and landed on dashboard.");
-        } catch (Exception e) {
-            test.fail("Login failed: " + e.getMessage());
-            TakeScreenshots.takeScreenshot(driver, "LoginFailure.png");
-        }
-    }
+		try {
+			driver.findElement(By.id("username")).sendKeys(userName);
+			driver.findElement(By.id("id_password")).sendKeys(passWord);
+			WebElement submitButton = driver.findElement(By.id("submit1"));
+			submitButton.click();
+			Thread.sleep(3000);
+			submitButton.click(); // In case of initial failure
 
-    private void handleAlertIfPresent() {
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            if (alert != null) {
-                alert.accept();
-            }
-        } catch (TimeoutException e) {
-            // No alert to handle
-        }
-    }
+			handleAlertIfPresent();
+			test.pass("Login successful and landed on dashboard.");
+		} catch (Exception e) {
+			test.fail("Login failed: " + e.getMessage());
+			TakeScreenshots.takeScreenshot(driver, "LoginFailure.png");
+		}
+	}
 
-    private void navigateToGeneralStockSummary() {
-        Actions actions = new Actions(driver);
-        WebElement storeMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/a"));
-        WebElement stockSummaryMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/ul/li[8]/a"));
-        WebElement generalStockMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/ul/li[8]/ul/li[1]/a"));
+	private void handleAlertIfPresent() {
+		try {
+			Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+			if (alert != null) {
+				alert.accept();
+			}
+		} catch (TimeoutException e) {
+			// No alert to handle
+		}
+	}
 
-        actions.moveToElement(storeMenu)
-               .moveToElement(stockSummaryMenu)
-               .moveToElement(generalStockMenu)
-               .click()
-               .perform();
-    }
+	private void navigateToGeneralStockSummary() {
+		Actions actions = new Actions(driver);
+		WebElement storeMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/a"));
+		WebElement stockSummaryMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/ul/li[8]/a"));
+		WebElement generalStockMenu = driver.findElement(By.xpath("//*[@id=\"cssmenu\"]/ul/li[8]/ul/li[8]/ul/li[1]/a"));
 
-    @Test(dataProvider = "filterData1", retryAnalyzer = RetryAnalyzer.class)
-    public void testFilters(String stock, String stockType, String stockQty, String order) throws InterruptedException {
-        test = extent.createTest("Filter Test", "Applying filters and validating results");
+		actions.moveToElement(storeMenu)
+		.moveToElement(stockSummaryMenu)
+		.moveToElement(generalStockMenu)
+		.click()
+		.perform();
+	}
 
-        applyFilter("//*[@id=\"txtobj3_chosen\"]", stock);
-        applyFilter("//*[@id=\"txtobj4_chosen\"]", stockType);
-        applyFilter("//*[@id=\"txtobj14_chosen\"]", stockQty);
-        applyFilter("//*[@id=\"txtobj15_chosen\"]", order);
+	@Test(dataProvider = "filterData1", retryAnalyzer = RetryAnalyzer.class)
+	public void testFilters(String stock, String stockType, String stockQty, String order) throws InterruptedException {
+		test = extent.createTest("Filter Test", "Applying filters and validating results");
 
-        WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[69]/table[1]/tbody[1]/tr[1]/td[2]/a[1]")));
-        searchButton.click();
+		applyFilter("//*[@id=\"txtobj3_chosen\"]", stock);
+		applyFilter("//*[@id=\"txtobj4_chosen\"]", stockType);
+		applyFilter("//*[@id=\"txtobj14_chosen\"]", stockQty);
+		applyFilter("//*[@id=\"txtobj15_chosen\"]", order);
 
-        validateResults();
-    }
+		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("/html/body/div[1]/div/div[1]/div[69]/table/tbody/tr/td[2]/input")));
+		searchButton.click();
 
-    private void applyFilter(String dropdownXPath, String input) {
-        WebElement dropdown = driver.findElement(By.xpath(dropdownXPath));
-        dropdown.click();
-        WebElement inputField = dropdown.findElement(By.xpath(".//div/div/input"));
-        inputField.sendKeys(input + Keys.ENTER);
-    }
+		validateResults();
+	}
 
-    private void validateResults() throws InterruptedException {
-        try {
-            WebElement resultsTable = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//*[@id=\"rpttable\"]/thead/tr/th")));
-            if (resultsTable.isDisplayed()) {
-                test.pass("Filters applied successfully and results displayed.");
-                System.out.println("Filters applied successfully and results displayed."+""+totalTestCount);
-                totalTestCount++;
-            }
-        } catch (Exception e) {
-            test.fail("Failed to validate results: " + e.getMessage());
-            TakeScreenshots.takeScreenshot(driver, "FilterError.png");
-        }
-        Thread.sleep(6000);
-    }
+	private void applyFilter(String dropdownXPath, String input) {
+		WebElement dropdown = driver.findElement(By.xpath(dropdownXPath));
+		dropdown.click();
+		WebElement inputField = dropdown.findElement(By.xpath(".//div/div/input"));
+		inputField.sendKeys(input + Keys.ENTER);
+	}
 
-    @AfterClass
-    public void summarizeResults() {
-        String message = (totalTestCount == EXPECTED_TEST_COUNT) 
-                ? "ALL TEST CASES EXECUTED SUCCESSFULLY" 
-                : "Test cases executed: " + totalTestCount;
-        System.out.println(message);
-    }
+	private void validateResults() throws InterruptedException {
+		try {
+			WebElement resultsTable = wait.until(ExpectedConditions.visibilityOfElementLocated(
+					By.xpath("//*[@id=\"rpttable\"]/thead/tr/th")));
+			if (resultsTable.isDisplayed()) {
+				test.pass("Filters applied successfully and results displayed.");
+				System.out.println("Filters applied successfully and results displayed."+""+totalTestCount);
+				totalTestCount++;
+			}
+		} catch (Exception e) {
+			test.fail("Failed to validate results: " + e.getMessage());
+			TakeScreenshots.takeScreenshot(driver, "FilterError.png");
+		}
+		Thread.sleep(6000);
+	}
 
-    @DataProvider(name = "filterData")
-    public Object[][] getFilterData() throws IOException {
-        List<Object[]> data = new ArrayList<>();
+	@AfterClass
+	public void summarizeResults() {
+		String message = (totalTestCount == EXPECTED_TEST_COUNT) 
+				? "ALL TEST CASES EXECUTED SUCCESSFULLY" 
+						: "Test cases executed: " + totalTestCount;
+		System.out.println(message);
+	}
 
-        try (FileInputStream fis = new FileInputStream(EXCEL_PATH);
-             Workbook workbook = WorkbookFactory.create(fis)) {
-            Sheet sheet = workbook.getSheetAt(0);
-            Iterator<Row> rows = sheet.iterator();
+	@DataProvider(name = "filterData")
+	public Object[][] getFilterData() throws IOException {
+		List<Object[]> data = new ArrayList<>();
 
-            int rowIndex = 0;
-            while (rows.hasNext()) {
-                Row row = rows.next();
-                if (rowIndex++ == 0 || isRowEmpty(row)) continue;
+		try (FileInputStream fis = new FileInputStream(EXCEL_PATH);
+				Workbook workbook = WorkbookFactory.create(fis)) {
+			Sheet sheet = workbook.getSheetAt(0);
+			Iterator<Row> rows = sheet.iterator();
 
-                data.add(new Object[]{
-                        getCellValue(row.getCell(0)),
-                        getCellValue(row.getCell(1)),
-                        getCellValue(row.getCell(2)),
-                        getCellValue(row.getCell(3))
-                });
-            }
-        }
+			int rowIndex = 0;
+			while (rows.hasNext()) {
+				Row row = rows.next();
+				if (rowIndex++ == 0 || isRowEmpty(row)) continue;
 
-        return data.toArray(new Object[0][]);
-    }
+				data.add(new Object[]{
+						getCellValue(row.getCell(0)),
+						getCellValue(row.getCell(1)),
+						getCellValue(row.getCell(2)),
+						getCellValue(row.getCell(3))
+				});
+			}
+		}
+
+		return data.toArray(new Object[0][]);
+	}
 
 	private boolean isRowEmpty(Row row) {
 		if (row == null) return true;
@@ -195,7 +194,7 @@ public class Stock_summary_general {
 		return true;
 	}
 
-    private String getCellValue(Cell cell) {
+	private String getCellValue(Cell cell) {
 		if (cell == null) return "";
 		switch (cell.getCellType()) {
 		case STRING:
@@ -207,8 +206,8 @@ public class Stock_summary_general {
 		default:
 			return "";
 		}
-    }
-    
+	}
+
 	@DataProvider	
 	public Object[][] filterData1(){
 		Object login[][]= {
@@ -225,11 +224,11 @@ public class Stock_summary_general {
 		return login;
 	}
 
-    @AfterTest
-    public void tearDown() {
-        extent.flush();
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+//	@AfterTest
+	public void tearDown() {
+		extent.flush();
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 }
