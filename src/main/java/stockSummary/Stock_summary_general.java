@@ -1,11 +1,16 @@
 package stockSummary;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,13 +22,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import com.aventstack.extentreports.*;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Stock_summary_general {
 
 	private static final String BASE_URL = "https://qa.freedomnote360.com/Member/Login";
 	private static final String EXCEL_PATH = "D:\\eclipse\\FreedomSoftScreens.com.in\\ExcelData\\Stock Summary Tested.xlsx";
-	private static final String REPORT_PATH = System.getProperty("user.dir") + "/test-output/ExtentStockSummaryReport.html";
+	private static final String REPORT_PATH = System.getProperty("user.dir") + "./ExtentStockSummaryReport.html";
 	private static  String userName="mageshwar@fss";
 	private static String passWord="Fss@123#";
 
@@ -31,29 +37,38 @@ public class Stock_summary_general {
 	private WebDriverWait wait;
 	private ExtentReports extent;
 	private ExtentTest test;
-	private int totalTestCount = 1;
-	private static final int EXPECTED_TEST_COUNT = 7;
-
-	@BeforeTest
+	private int totalTestCount = 0;
+	private static final int EXPECTED_TEST_COUNT =177;
+	public Logger logger;
+	
+	@BeforeClass
 	public void setup() throws InterruptedException {
+		logger=LogManager.getLogger(this.getClass()); 
+		
 		setupExtentReports();
 		setupWebDriver();
 		loginToApplication();
-		navigateToGeneralStockSummary();
+		navigateToGeneralStockSummary();	
+		
 	}
 
+	
 	private void setupExtentReports() {
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(REPORT_PATH);
+		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(REPORT_PATH);
 		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
+		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Tester", "Mageshwar");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Type of Testing", "Regression");
+		sparkReporter.config().setDocumentTitle("Automation Report");
+		sparkReporter.config().setReportName("Functional Testing");
+		sparkReporter.config().setTheme(Theme.DARK);
 	}
 
 	private void setupWebDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
+		//options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 
 		// Configure EdgeOptions
@@ -111,7 +126,7 @@ public class Stock_summary_general {
 		.perform();
 	}
 
-	@Test(dataProvider = "filterData1", retryAnalyzer = RetryAnalyzer.class)
+	@Test(dataProvider = "filterData")
 	public void testFilters(String stock, String stockType, String stockQty, String order) throws InterruptedException {
 		test = extent.createTest("Filter Test", "Applying filters and validating results");
 
@@ -121,12 +136,12 @@ public class Stock_summary_general {
 		applyFilter("//*[@id=\"txtobj15_chosen\"]", order);
 
 		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("/html/body/div[1]/div/div[1]/div[69]/table/tbody/tr/td[2]/input")));
-		searchButton.click();
+				By.xpath("//*[@id=\"btnlistsearch\"]")));
+	//	searchButton.click();
 
 		validateResults();
 	}
-
+	//*[@id="txtobj3_chosen"]/div/div/input
 	private void applyFilter(String dropdownXPath, String input) {
 		WebElement dropdown = driver.findElement(By.xpath(dropdownXPath));
 		dropdown.click();
@@ -135,12 +150,14 @@ public class Stock_summary_general {
 	}
 
 	private void validateResults() throws InterruptedException {
+		
 		try {
 			WebElement resultsTable = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//*[@id=\"rpttable\"]/thead/tr/th")));
 			if (resultsTable.isDisplayed()) {
 				test.pass("Filters applied successfully and results displayed.");
 				System.out.println("Filters applied successfully and results displayed."+""+totalTestCount);
+			//	logger.info("Filters applied successfully and results displayed."+""+totalTestCount);
 				totalTestCount++;
 			}
 		} catch (Exception e) {
@@ -227,8 +244,16 @@ public class Stock_summary_general {
 //	@AfterTest
 	public void tearDown() {
 		extent.flush();
-		if (driver != null) {
-			driver.quit();
-		}
+		String pathOfExtentReport = REPORT_PATH;
+	    File extentReport = new File(pathOfExtentReport);
+
+	    try {
+	        Desktop.getDesktop().browse(extentReport.toURI());
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		//if (driver != null) {
+		//	driver.quit();
+		//}
 	}
 }
