@@ -34,7 +34,7 @@ public class Stock_summary_general {
 	public static String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	public String REPORT_PATH = System.getProperty("user.dir") + "./reports/"+"/StockSummaryReport-"+timeStamp+".html";
 	private static  String userName="mageshwar@fss";
-	private static String passWord="Fss@123#";
+	private static String passWord="Mageshwar248@";
 
 	private WebDriver driver;
 	private WebDriverWait wait;
