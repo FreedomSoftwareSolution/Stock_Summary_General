@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="5" thread-count="2" parallel="tests">
+<suite name="Suite" verbose="5">
 
-<listeners>
-<listener class-name="stockSummary.Transformer"></listener>
-</listeners>
-  <test  name="Test1">
-    <classes >
-      <class name="stockSummary.Stock_summary_general"/>
-    </classes>
+  <test thread-count="5" name="Test" enabled="true">
+    <classes  >
+       <class name="stockSummary.Stock_summary_general"/>
+    </classes> 
   </test> <!-- Test -->
-  
-<!--  <test  name="Test2">
-    <classes >
-      <class name="stockSummary.Stock_summary_general"/>
-    </classes>
-  </test>-->
 </suite> <!-- Suite -->
