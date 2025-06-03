@@ -129,7 +129,7 @@ public class Stock_summary_general {
 		.perform();
 	}
 
-	@Test(dataProvider = "filterData1")
+	@Test(dataProvider = "filterData")
 	public void testFilters(String stock, String stockType, String stockQty, String order) throws InterruptedException {
 		test = extent.createTest("Filter Test", "Applying filters and validating results");
 
